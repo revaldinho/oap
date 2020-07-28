@@ -1,0 +1,3 @@
+verilog work "../../src/osl.h"
+verilog work "../../src/osl_rxtx.v"
+
