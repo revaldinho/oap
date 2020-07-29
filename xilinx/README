@@ -10,7 +10,7 @@ if [ "$1" == "sx" ]; then
 fi
 
 # code project name here temporarily
-project_name="osl_rxtx"
+project_name="opc7node"
 target="xc6slx9-csg225-3"
 
 # Clean up so only primary data remains
