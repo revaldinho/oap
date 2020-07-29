@@ -1,6 +1,6 @@
-module ram8192x32 (
+module ram4096x32 (
                    input         clk,
-                   input [12:0]  address,
+                   input [11:0]  address,
                    input         resetb,
                    input [31:0]  din,
                    input         cs,
@@ -9,7 +9,7 @@ module ram8192x32 (
                    );
   
   reg [31:0]                     mem [ 8191:0 ] ;  (* RAM_STYLE="BLOCK" *)
-  reg [12:0]                     address_q ;
+  reg [11:0]                     address_q ;
   reg [31:0]                     din_q;
   reg                            cs_q;
   reg                            rnw_q;  
@@ -20,7 +20,7 @@ module ram8192x32 (
     // Latch all control and address signals on rising edge
     if ( !resetb ) begin
       cs_q <= 0;
-      rnw_q <= 0;      
+      rnw_q <= 1;      
     end 
     else begin
       cs_q <= cs;
@@ -30,8 +30,7 @@ module ram8192x32 (
     end
   end // always @ (posedge clk or negedge resetb )
   
-
-  always @ ( posedge clk ) begin
+  always @ (posedge clk) begin
     // Write to RAM on next cycle - whole cycle to complete
     if (cs_q && !rnw_q && resetb ) begin
       mem[address_q] <= din_q;

@@ -1,7 +1,7 @@
 verilog work "../../src/osl.h"
 verilog work "../../src/osl_rxtx.v"
 verilog work "../../src/opc7node.v"
-verilog work "../../src/ram8192x32.v"
+verilog work "../../src/ram4096x32.v"
 verilog work "../../../opc/opc7/opc7cpu.v"
 
 

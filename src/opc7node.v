@@ -72,9 +72,9 @@ module opc7node (
                    .vio(vio)
                    );
 
-  ram8192x32 RAM_0 (
+  ram4096x32 RAM_0 (
                     .clk(clk),
-                    .address(address[12:0]),
+                    .address(address[11:0]),
                     .resetb(resetb),
                     .din(cpu_dout),
                     .cs(vpa|vda),
