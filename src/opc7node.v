@@ -51,8 +51,7 @@ module opc7node (
       else if ( (address_q & 19'h0FF)==19'h040)
         cpu_din_r = link_dout[3];
       else // if ( (address_q & 19'h0FF)==19'h041)
-        cpu_din_r = {30'b0, link_dor[3], link_dir[3]} ;
-      
+        cpu_din_r = {30'b0, link_dor[3], link_dir[3]} ;      
     end
     else
       cpu_din_r = ram_dout;
@@ -81,7 +80,6 @@ module opc7node (
                     .rnw(rnw),
                     .dout(ram_dout)
                    );
-
   
   osl_rxtx UA_N_0 (
                    .clk(clk),

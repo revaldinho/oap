@@ -34,7 +34,7 @@ module ram4096x32 (
     // Write to RAM on next cycle - whole cycle to complete
     if (cs_q && !rnw_q && resetb ) begin
       mem[address_q] <= din_q;
-      // $display(" STORE :  Address : 0x%05x ( %6d )  : Data : 0x%08x ( %d)",address_q,address_q,din_q,din_q);       
+      // $display(" STORE :  Address : 0x%05x ( %6d )  : Data : 0x%08x ( %d)",address_q,address_q,din_q,din_q);       
     end      
   end
 endmodule
