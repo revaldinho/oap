@@ -10,7 +10,8 @@ if [ "$1" == "sx" ]; then
 fi
 
 # code project name here temporarily
-project_name="opc7node"
+# project_name="opc7node"
+project_name="opc7array_2x2"
 target="xc6slx9-csg225-3"
 
 # Clean up so only primary data remains
