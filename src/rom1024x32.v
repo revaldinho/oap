@@ -4,7 +4,7 @@ module rom1024x32 (
                    output [31:0] dout
                    );
   
-  parameter  ROMFILE="../firmware/hello.hex";
+  parameter  ROMFILE="boot.hex";
   
   reg [31:0]                     mem [ 1023:0 ] ;  (* RAM_STYLE="DISTRIBUTED" *)
   reg [9:0]                      address_q ;

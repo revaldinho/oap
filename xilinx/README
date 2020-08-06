@@ -25,6 +25,7 @@ fi
 workdir=build_`date +%Y%m%d_%H%M%S`
 mkdir $workdir
 pushd $workdir
+cp ../../firmware/*hex .
 mkdir tmp
 mkdir xst
 
