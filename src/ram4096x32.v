@@ -8,7 +8,7 @@ module ram4096x32 (
                    output [31:0] dout
                    );
   
-  reg [31:0]                     mem [ 8191:0 ] ;  (* RAM_STYLE="BLOCK" *)
+  reg [31:0]                     mem [4095:0] ;  (* RAM_STYLE="BLOCK" *)
   reg [11:0]                     address_q ;
   reg [31:0]                     din_q;
   reg                            cs_q;
