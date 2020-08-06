@@ -18,7 +18,7 @@ osl_tb_neg.vcd: osl_tb_neg.exe
 	./osl_tb_neg.exe
 
 opc7array: ${SRCS} ${OPCDIR}/opc7cpu.v ../firmware/boot.hex
-	cp ../firmware/boot.hex .
+	head -200 ../firmware/boot.hex > boot.hex
 	iverilog -I${SRCDIR} -o opc7array.exe ${SRCS} ${OPCDIR}/opc7cpu.v
 
 

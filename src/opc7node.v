@@ -91,9 +91,9 @@ module opc7node (
                     .dout(ram_dout)
                    );
 
-  rom1024x32 ROM_0 (
+  rom2048x32 ROM_0 (
                     .clk(clk),
-                    .address(address[9:0]),
+                    .address(address[10:0]),
                     .dout(rom_dout)
                     );
   

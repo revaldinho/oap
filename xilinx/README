@@ -25,7 +25,7 @@ fi
 workdir=build_`date +%Y%m%d_%H%M%S`
 mkdir $workdir
 pushd $workdir
-cp ../../firmware/*hex .
+cp ../../firmware/*hex  .
 mkdir tmp
 mkdir xst
 
@@ -100,3 +100,6 @@ else
     # dump a verilog netlist - something like this,..
     netgen -w -ofmt verilog  -aka ${project_name}_map.ncd
 fi
+
+
+rm *.hex
